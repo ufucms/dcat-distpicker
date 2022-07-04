@@ -15,28 +15,16 @@
 
 ## 安装
 
-首先
-
 ```shell
-# jqhph/dcat-admin 1.x
-composer require "super-eggs/dcat-distpicker:^1.0"
-
-# jqhph/dcat-admin 2.x
-composer require "super-eggs/dcat-distpicker:^2.0"
+# ufucms/dcat-admin 2.x
+composer require "ufucms/dcat-distpicker:^2.0"
 ```
 
-然后: (dcat-admin 2.x 无需执行!!!)
-
-```shell
-php artisan admin:import dcat-distpicker
-```
 
 ## 开启扩展
 
 后台开启
 
-- dcat-admin 1.x
-  ![image-20200628150337687](https://tva1.sinaimg.cn/large/007S8ZIlly1gg80m0xbf8j321m0iaq5b.jpg)
 - dcat-admin 2.x
   ![image-20201201230850804](https://i.loli.net/2020/12/01/cqbR7FIiErZTzeY.png)
 
@@ -128,9 +116,13 @@ $grid->column('district_id')->distpicker();
 并且提供了一个全局可用的辅助函数:
 
 ```php
-use SuperEggs\DcatDistpicker\DcatDistpickerHelper;
+use SuperEggs\DcatDistpicker\Helper;
 
-DcatDistpickerHelper::getAreaName($code); // return string
+// 根据code获取name
+Helper::getAreaName($code); // return string
+
+// 根据name获取code
+Helper::getAreaCode($name); // return string
 ```
 
 ## 地区编码数据
@@ -142,7 +134,7 @@ DcatDistpickerHelper::getAreaName($code); // return string
 由衷感谢以下开源软件、框架等（包括但不限于）
 
 - [laravel](https://laravel.com)
-- [jqhph/dcat-admin](https://github.com/jqhph/dcat-admin)
+- [ufucms/dcat-admin](https://github.com/ufucms/dcat-admin)
 - [fengyuanchen/distpicker](https://github.com/fengyuanchen/distpicker)
 - [laravel-admin-extensions/china-distpicker](https://github.com/laravel-admin-extensions/china-distpicker)
 

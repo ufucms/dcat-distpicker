@@ -3,7 +3,7 @@
 namespace SuperEggs\DcatDistpicker;
 
 
-class DcatDistpickerHelper
+class Helper
 {
     protected static $areaObject = [
         110000 => '北京市',
@@ -3265,6 +3265,16 @@ class DcatDistpickerHelper
     public static function getAreaName($code): string
     {
         return self::$areaObject[$code] ?? "";
+    }
+
+    /**
+     * 查询指定名称的code
+     * @param  string  $name
+     * @return int|string
+     */
+    public static function getAreaCode($name): string
+    {
+        return array_search($name, self::$areaObject) ?? "";
     }
 
     /**

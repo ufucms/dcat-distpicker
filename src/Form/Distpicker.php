@@ -1,13 +1,13 @@
 <?php
 
-namespace SuperEggs\DcatDistpicker\Form;
+namespace Ufucms\DcatDistpicker\Form;
 
 use Dcat\Admin\Form\Field;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Arr;
-use SuperEggs\DcatDistpicker\DcatDistpickerHelper;
+use Ufucms\DcatDistpicker\Helper;
 
 class Distpicker extends Field
 {
@@ -20,7 +20,7 @@ class Distpicker extends Field
      * @var array
      */
     protected static $js = [
-        '@extension/super-eggs/dcat-distpicker/dist/distpicker.js',
+        '@extension/ufucms/dcat-distpicker/dist/distpicker.js',
     ];
 
     /**
@@ -43,10 +43,10 @@ class Distpicker extends Field
     {
         parent::__construct($column, $arguments);
         if (!Arr::isAssoc($column)) {
-            $this->column = DcatDistpickerHelper::arrayCombine($this->columnKeys, $column);
+            $this->column = Helper::arrayCombine($this->columnKeys, $column);
         } else {
-            $this->column = DcatDistpickerHelper::arrayCombine($this->columnKeys, array_keys($column));
-            $this->placeholder = DcatDistpickerHelper::arrayCombine($this->columnKeys, array_values($column));
+            $this->column = Helper::arrayCombine($this->columnKeys, array_keys($column));
+            $this->placeholder = Helper::arrayCombine($this->columnKeys, array_values($column));
         }
 
         $this->label = empty($arguments) ? '地区选择' : current($arguments);

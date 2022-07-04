@@ -1,6 +1,6 @@
 <?php
 
-namespace SuperEggs\DcatDistpicker\Filter;
+namespace Ufucms\DcatDistpicker\Filter;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Grid\Filter\AbstractFilter;
@@ -16,7 +16,7 @@ class DistpickerFilter extends AbstractFilter
     protected $column = [];
 
     protected static $js = [
-        '@extension/super-eggs/dcat-distpicker/dist/distpicker.js',
+        '@extension/ufucms/dcat-distpicker/dist/distpicker.js',
     ];
 
     /**

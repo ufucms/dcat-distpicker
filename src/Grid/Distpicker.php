@@ -1,14 +1,14 @@
 <?php
 
-namespace SuperEggs\DcatDistpicker\Grid;
+namespace Ufucms\DcatDistpicker\Grid;
 
 use Dcat\Admin\Grid\Displayers\AbstractDisplayer;
-use SuperEggs\DcatDistpicker\DcatDistpickerHelper;
+use Ufucms\DcatDistpicker\Helper;
 
 class Distpicker extends AbstractDisplayer
 {
     public function display()
     {
-        return DcatDistpickerHelper::getAreaName($this->value);
+        return Helper::getAreaName($this->value);
     }
 }

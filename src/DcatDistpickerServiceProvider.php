@@ -1,14 +1,14 @@
 <?php
 
-namespace SuperEggs\DcatDistpicker;
+namespace Ufucms\DcatDistpicker;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid\Column;
 use Dcat\Admin\Grid\Filter;
-use SuperEggs\DcatDistpicker\Filter\DistpickerFilter;
-use SuperEggs\DcatDistpicker\Form\Distpicker;
+use Ufucms\DcatDistpicker\Filter\DistpickerFilter;
+use Ufucms\DcatDistpicker\Form\Distpicker;
 
 
 class DcatDistpickerServiceProvider extends ServiceProvider
