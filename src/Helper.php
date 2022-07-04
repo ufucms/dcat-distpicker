@@ -3278,6 +3278,42 @@ class Helper
     }
 
     /**
+     * 查询指定codes的名称
+     * @param  array $codes
+     * @return array|string
+     */
+    public static function getAreaNames($codes, $delimiter='/'): array
+    {
+        $names = [];
+        foreach ($codes as $key => $code) {
+            $names[$key] = self::$areaObject[$code] ?? "";
+        }
+        if($delimiter){
+            return implode($delimiter, $names);
+        }else{
+            return $names;
+        }
+    }
+
+    /**
+     * 查询指定名称的codes
+     * @param  array $name
+     * @return array|string
+     */
+    public static function getAreaCodes($names, $delimiter=','): array
+    {
+        $codes = [];
+        foreach ($names as $key => $name) {
+            $codes[$key] = array_search($name, self::$areaObject) ?? "";
+        }
+        if($delimiter){
+            return implode($delimiter, $codes);
+        }else{
+            return $codes;
+        }
+    }
+
+    /**
      * 合并两个数组来创建一个新数组
      * @param  array  $keys
      * @param  array  $values
