@@ -3329,4 +3329,30 @@ class Helper
 
         return $arr;
     }
+    
+    /**
+     * 根据县区code 获取省市区信息详情
+     * @param  number $districtCode
+     * @return array
+     */
+    public static function getAreaInfoByDistrictCode($districtCode)
+    {
+        // 获取省市数据
+        $provinceCode = (int) floor($districtCode / 10000) * 10000;
+        $cityCode = (int) floor($districtCode / 100) * 100;
+        $area_codes = [
+            $provinceCode,
+            $cityCode,
+            $districtCode
+        ];
+        // 获取省市区 KV数据
+        $area = [];
+        foreach ($area_codes as $key => $val) {
+            $area[$val] = self::getAreaName($val);
+        }
+        // 省市区字符串拼接
+        $area_names = self::getAreaNames($area_codes);
+        return compact('area', 'area_codes', 'area_names');
+    }
+
 }
