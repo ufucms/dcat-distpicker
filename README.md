@@ -16,8 +16,8 @@
 ## 安装
 
 ```shell
-# ufucms/dcat-admin 2.x
-composer require "ufucms/dcat-distpicker:^2.0"
+# ufucms/dcat-admin 1.x
+composer require "ufucms/dcat-distpicker:^1.0"
 ```
 
 
@@ -116,7 +116,7 @@ $grid->column('district_id')->distpicker();
 并且提供了一个全局可用的辅助函数:
 
 ```php
-use SuperEggs\DcatDistpicker\Helper;
+use Ufucms\Distpicker\Helper;
 
 // 根据code获取name
 Helper::getAreaName($code); // return string

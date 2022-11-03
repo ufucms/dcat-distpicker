@@ -1,13 +1,13 @@
 <?php
 
-namespace Ufucms\DcatDistpicker\Form;
+namespace Ufucms\Distpicker\Form;
 
 use Dcat\Admin\Form\Field;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Arr;
-use Ufucms\DcatDistpicker\Helper;
+use Ufucms\Distpicker\Helper;
 
 class Distpicker extends Field
 {

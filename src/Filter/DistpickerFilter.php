@@ -1,6 +1,6 @@
 <?php
 
-namespace Ufucms\DcatDistpicker\Filter;
+namespace Ufucms\Distpicker\Filter;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Grid\Filter\AbstractFilter;

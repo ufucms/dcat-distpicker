@@ -18,14 +18,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Ufucms\\DcatDistpicker\\": "src/"
+            "Ufucms\\Distpicker\\": "src/"
         }
     },
     "extra": {
-        "dcat-admin": "Ufucms\\DcatDistpicker\\DcatDistpickerServiceProvider",
+        "dcat-admin": "Ufucms\\Distpicker\\DistpickerServiceProvider",
         "laravel": {
             "providers": [
-                "Ufucms\\DcatDistpicker\\DcatDistpickerServiceProvider"
+                "Ufucms\\Distpicker\\DistpickerServiceProvider"
             ]
         }
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Ufucms\DcatDistpicker\Grid;
+namespace Ufucms\Distpicker\Grid;
 
 use Dcat\Admin\Grid\Displayers\AbstractDisplayer;
-use Ufucms\DcatDistpicker\Helper;
+use Ufucms\Distpicker\Helper;
 
 class Distpicker extends AbstractDisplayer
 {

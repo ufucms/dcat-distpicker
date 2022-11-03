@@ -1,17 +1,17 @@
 <?php
 
-namespace Ufucms\DcatDistpicker;
+namespace Ufucms\Distpicker;
 
 use Dcat\Admin\Admin;
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid\Column;
 use Dcat\Admin\Grid\Filter;
-use Ufucms\DcatDistpicker\Filter\DistpickerFilter;
-use Ufucms\DcatDistpicker\Form\Distpicker;
+use Ufucms\Distpicker\Filter\DistpickerFilter;
+use Ufucms\Distpicker\Form\Distpicker;
 
 
-class DcatDistpickerServiceProvider extends ServiceProvider
+class DistpickerServiceProvider extends ServiceProvider
 {
     public function init()
     {

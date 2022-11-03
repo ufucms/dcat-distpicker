@@ -1,6 +1,6 @@
 <?php
 
-namespace SuperEggs\DcatDistpicker;
+namespace Ufucms\Distpicker;
 
 
 class Helper
