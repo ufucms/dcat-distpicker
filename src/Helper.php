@@ -3337,7 +3337,7 @@ class Helper
      * @param  array $codes
      * @return array|string
      */
-    public static function getAreaNames($codes, $delimiter='/'): array
+    public static function getAreaNames($codes, $delimiter='/'): array|string
     {
         $names = [];
         foreach ($codes as $key => $code) {
@@ -3355,7 +3355,7 @@ class Helper
      * @param  array $name
      * @return array|string
      */
-    public static function getAreaCodes($names, $delimiter=','): array
+    public static function getAreaCodes($names, $delimiter=','): array|string
     {
         $codes = [];
         foreach ($names as $key => $name) {
