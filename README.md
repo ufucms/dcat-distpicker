@@ -16,7 +16,7 @@
 ## 安装
 
 ```shell
-# ufucms/dcat-admin 1.x
+# ufucms/dcat-admin 
 composer require "ufucms/dcat-distpicker:^1.0"
 ```
 
@@ -121,13 +121,13 @@ use Ufucms\Distpicker\Helper;
 // 根据code获取name
 Helper::getAreaName($code); // return string
 
-// 根据name获取code
-Helper::getAreaCode($name); // return string
+// 根据codes数组获取地区名称 $delimiter为地区拼接符 默认是/
+Helper::getAreaNames($codes, $delimiter); // return string
 ```
 
 ## 地区编码数据
 
-[Distpicker](https://github.com/fengyuanchen/distpicker) 所使用的地域编码是基于国家统计局发布的数据, 数据字典为`china_area.json`文件.
+[Distpicker](https://github.com/fengyuanchen/distpicker) 所使用的地域编码是基于国家统计局发布的数据, 数据字典为`distpicker.json`文件.
 
 ## 鸣谢
 
