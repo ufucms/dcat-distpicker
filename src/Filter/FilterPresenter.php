@@ -8,6 +8,6 @@ class FilterPresenter extends Presenter
 {
     public function view(): string
     {
-        return 'china-distpicker::filter';
+        return 'dcat-distpicker::filter';
     }
 }

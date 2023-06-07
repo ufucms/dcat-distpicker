@@ -20,6 +20,11 @@ class DistpickerFilter extends AbstractFilter
     ];
 
     /**
+     * @var string
+     */
+    protected $valueType = 'code';
+
+    /**
      * @var array
      */
     protected $value = [];
@@ -146,6 +151,17 @@ class DistpickerFilter extends AbstractFilter
     }
 
     /**
+     * @param  string  $type
+     * @return array|string
+     * @author super-eggs
+     */
+    public function valueType($type)
+    {
+        $this->valueType = $type;
+        return $this;
+    }
+
+    /**
      * 格式编号
      * @param  array|string  $columns
      * @return string
@@ -208,13 +224,14 @@ JS;
         $this->setupScript();
 
         return array_merge([
-            'id' => $this->id,
-            'name' => $this->formatName($this->column),
-            'label' => $this->label,
-            'value' => $this->normalizeValue(),
+            'id'        => $this->id,
+            'name'      => $this->formatName($this->column),
+            'label'     => $this->label,
+            'valueType' => $this->valueType,
+            'value'     => $this->normalizeValue(),
             'presenter' => $this->presenter(),
-            'width' => $this->width,
-            'style' => $this->style,
+            'width'     => $this->width,
+            'style'     => $this->style,
         ], $this->presenter()->variables());
     }
 }

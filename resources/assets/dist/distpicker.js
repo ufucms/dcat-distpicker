@@ -52,7 +52,7 @@
     // Show placeholder.
     placeholder: true,
     // Select value. Options: 'name' and 'code'
-    valueType: 'name',
+    valueType: 'code',
     // Defines the initial value of province.
     province: '—— 省份 ——',
     // Defines the initial value of city.

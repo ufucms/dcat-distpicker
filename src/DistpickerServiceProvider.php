@@ -16,7 +16,10 @@ class DistpickerServiceProvider extends ServiceProvider
     public function init()
     {
         parent::init();
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'china-distpicker');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dcat-distpicker');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([__DIR__.'/../config' => config_path()], 'dcat-distpicker');
+        }
 
         //加载插件
         Admin::booting(static function () {

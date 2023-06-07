@@ -14,7 +14,7 @@ class Distpicker extends Field
     /**
      * @var string
      */
-    protected $view = 'china-distpicker::select';
+    protected $view = 'dcat-distpicker::select';
 
     /**
      * @var array
@@ -27,6 +27,11 @@ class Distpicker extends Field
      * @var array
      */
     protected $columnKeys = ['province', 'city', 'district'];
+
+    /**
+     * @var string
+     */
+    protected $valueType = 'code';
 
     /**
      * @var array
@@ -91,11 +96,21 @@ class Distpicker extends Field
     }
 
     /**
+     * @param  String  $type
+     * @return $this
+     */
+    public function valueType(string $type = 'code'): self
+    {
+        $this->valueType = $type;
+        return $this;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function render()
     {
-        $this->attribute('data-value-type', 'code');
+        $this->attribute('data-value-type', $this->valueType);
 
         $province = old($this->column['province'], Arr::get($this->value(), 'province')) ?: Arr::get($this->placeholder,
             'province');
@@ -114,6 +129,7 @@ class Distpicker extends Field
         $this->script = <<<JS
 Dcat.init('#{$id}', function (self) {
     self.distpicker({
+      valueType: '$this->valueType',
       province: '$province',
       city: '$city',
       district: '$district'
