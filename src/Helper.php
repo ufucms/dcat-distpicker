@@ -13,7 +13,7 @@ class Helper
             $this->distpicker = config('dcat-distpicker');
         }
         return $this->distpicker;
-    };
+    }
 
     /**
      * 查询指定 code 的名称
