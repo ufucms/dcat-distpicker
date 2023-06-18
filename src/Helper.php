@@ -5,14 +5,14 @@ namespace Ufucms\Distpicker;
 
 class Helper
 {
-    protected $distpicker = [];
+    protected static $distpicker = [];
 
     public static function init(): array
     {
-        if(!$this->distpicker){
-            $this->distpicker = config('dcat-distpicker');
+        if(!self::$distpicker){
+            self::$distpicker = config('dcat-distpicker');
         }
-        return $this->distpicker;
+        return self::$distpicker;
     }
 
     /**
