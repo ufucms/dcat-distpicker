@@ -1,5 +1,5 @@
 <div class="{{$viewClass['form-group']}} {!! !$errors->hasAny($errorKey) ? '' : 'has-error' !!}">
-    <label for="{{$id}}" class="{{$viewClass['label']}} control-label">{{$label}}</label>
+    <label for="{{$id}}" class="{{$viewClass['label']}} form-check-label control-label">{{$label}}</label>
     <div class="{{$viewClass['field']}} form-inline">
         @foreach($errorKey as $key => $col)
             @if($errors->has($col))
